@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="atcart_greenhouse_gazebo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0072165 -9.8416E-11 0.049749"
+        rpy="0 0 0" />
+      <mass
+        value="5.7003" />
+      <inertia
+        ixx="0.045977"
+        ixy="-5.8538E-09"
+        ixz="-0.00017433"
+        iyy="0.02225"
+        iyz="-1.2093E-10"
+        izz="0.062715" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="caster_holder_left">
+    <inertial>
+      <origin
+        xyz="-0.02177 0.0014053 0.046067"
+        rpy="0 0 0" />
+      <mass
+        value="0.32044" />
+      <inertia
+        ixx="0.00025526"
+        ixy="3.2464E-06"
+        ixz="-5.7646E-05"
+        iyy="0.00031844"
+        iyz="1.5351E-05"
+        izz="0.00028574" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_holder_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.061 0.09 -0.1283"
+      rpy="0 0 -0.02603" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_holder_left" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_left">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 3.6943163319314E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.192088631471314" />
+      <inertia
+        ixx="0.000151182469566071"
+        ixy="-6.99354014046243E-34"
+        ixz="5.57175414480924E-19"
+        iyy="0.000151182469566071"
+        iyz="-1.53010454143402E-19"
+        izz="0.000279600031953075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.029 0 0.012"
+      rpy="1.5708 0 0" />
+    <parent
+      link="caster_holder_left" />
+    <child
+      link="caster_wheel_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_holder_right">
+    <inertial>
+      <origin
+        xyz="-0.0217591852847827 0.00155718746772504 0.0460672350911227"
+        rpy="0 0 0" />
+      <mass
+        value="0.320441099388755" />
+      <inertia
+        ixx="0.000255304046268681"
+        ixy="3.68752178239491E-06"
+        ixz="-5.75374331188915E-05"
+        iyy="0.000318389436371272"
+        iyz="1.57528610382236E-05"
+        izz="0.000285734524653862" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_holder_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.061 -0.09 -0.1283"
+      rpy="0 0 -0.02603" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_holder_right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_right">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 2.77555756156289E-17 3.69431633334694E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.192088631471313" />
+      <inertia
+        ixx="0.000151182469566071"
+        ixy="-5.54803946229349E-35"
+        ixz="-1.74171149779166E-19"
+        iyy="0.000151182469566071"
+        iyz="-3.35336884180025E-21"
+        izz="0.000279600031953075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.028999 0.00020234 0.012"
+      rpy="1.5708 0 -0.0069773" />
+    <parent
+      link="caster_holder_right" />
+    <child
+      link="caster_wheel_right" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_wheel_left">
+    <inertial>
+      <origin
+        xyz="1.42238878086953E-06 3.65240566235769E-07 0.035018661539531"
+        rpy="0 0 0" />
+      <mass
+        value="2.28211944233861" />
+      <inertia
+        ixx="0.0148991041334707"
+        ixy="-1.49538564040222E-11"
+        ixz="-2.45298120595338E-07"
+        iyy="0.0148991148755385"
+        iyz="-8.73898019013882E-09"
+        izz="0.0280100112156707" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.189 0.21606 -0.015"
+      rpy="1.5708 0.071178 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_wheel_right">
+    <inertial>
+      <origin
+        xyz="1.4236E-06 -3.6567E-07 0.10553"
+        rpy="0 0 0" />
+      <mass
+        value="2.2821" />
+      <inertia
+        ixx="0.014899"
+        ixy="-1.2769E-11"
+        ixz="2.4534E-07"
+        iyy="0.014899"
+        iyz="-8.7567E-09"
+        izz="0.02801" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.189 -0.075512 -0.015"
+      rpy="1.5708 -0.74326 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_right" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <!-- Lidar link and joint -->
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001"  ixy="0"  ixz="0" iyy="0.00001" iyz="0" izz="0.00001" />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+         <cylinder radius="0.0508" length="0.055"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+         <cylinder radius="0.0508" length="0.055"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.1 0.0 0.3" rpy="0 0 0"/>
+  </joint>
+
+  <!-- IMU link and joint -->
+  <link name="imu_link" />
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+  </joint>
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>40</updateRate>
+      <legacyMode>false</legacyMode>
+      <leftJoint>rear_wheel_left_joint</leftJoint>
+      <rightJoint>rear_wheel_right_joint</rightJoint>
+      <wheelSeparation>0.362</wheelSeparation>
+      <wheelDiameter>0.310</wheelDiameter>
+      <torque>30</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishWheelJointState>false</publishWheelJointState>
+      <rosDebugLevel>na</rosDebugLevel>
+      <wheelAcceleration>0</wheelAcceleration>
+      <wheelTorque>30</wheelTorque>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <publishTf>1</publishTf>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="lidar_link">
+    <sensor name="lidar" type="gpu_ray">
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2019</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>-3.14159274101</min_angle>
+            <max_angle>3.14159274101</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.100000</min>
+          <max>30.0</max>
+          <resolution>0.015000</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <!-- <plugin name="scan" filename="libgazebo_ros_ray_sensor.so"> -->
+      <!-- this answer seems to make scan topic appear on ros https://answers.ros.org/question/273492/laserscanner-in-gazebo-does-not-publish-data-while-topic-is-set/ -->
+      <!-- <plugin name="scan" filename="libgazebo_ros_laser.so"> -->
+      <plugin name="scan" filename="libgazebo_ros_gpu_laser.so">
+        <!-- <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type> -->
+        <topicName>atcart_scan</topicName>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+</robot>
