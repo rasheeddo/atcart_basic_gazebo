@@ -423,6 +423,7 @@
     </plugin>
   </gazebo>
 
+
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_ray">
       <always_on>true</always_on>

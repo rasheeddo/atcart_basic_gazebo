@@ -1,6 +1,11 @@
 <launch>
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
-    <arg name="world_name" value="$(find four_shelf)/four_shelf.world" />
+    <!-- <arg name="world_name" value="$(find four_shelf)/four_shelf.world" /> -->
+    <arg name="world_name" value="$(find NTT_Fukuya_house1_noFloor)/ntt_greenhouse_no_floor.world" />
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="0" />
+    <arg name="gui" value="true" />
+    <arg name="headless" value="false" />
   </include>
   <node
     name="tf_footprint_base"
@@ -30,4 +35,15 @@
     pkg="rostopic"
     type="rostopic"
     args="pub /calibrated std_msgs/Bool true" />
+
+ <!--  <param name="robot_description" textfile="$(find atcart_greenhouse_gazebo)/urdf/atcart_greenhouse_gazebo.urdf" />
+  <rosparam file="$(find atcart_greenhouse_gazebo)/config/config.yaml" command="load" />
+  
+  <node name="controller_spawner" pkg ="controller_manager" type="spawner" ns="/atcart_greenhouse_gazebo" args="joint_state_controller left_drive_wheel_velocity_controller right_drive_wheel_velocity_controller"/> -->
+
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+        <remap from="joint_states" to="/atcart_greenhouse_gazebo/joint_states" />
+  </node> -->
+
+
 </launch>
