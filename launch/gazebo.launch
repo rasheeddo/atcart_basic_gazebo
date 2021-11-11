@@ -1,6 +1,6 @@
 <launch>
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
-    <arg name="world_name" value="$(find four_shelf)/four_shelf.world" />
+    <arg name="world_name" value="$(find NTT_Fukuya_house1_noFloor)/ntt_greenhouse_no_floor.world" />
   </include>
   <node
     name="tf_footprint_base"
