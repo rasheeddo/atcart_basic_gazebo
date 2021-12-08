@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(atcart_greenhouse_gazebo)
+project(atcart_basic_gazebo)
 
 find_package(catkin REQUIRED)
 

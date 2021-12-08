@@ -1,7 +1,5 @@
 <launch>
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
-    <arg name="world_name" value="$(find NTT_Fukuya_house1_noFloor)/ntt_greenhouse_no_floor.world" />
-
   </include>
   <node
     name="tf_footprint_base"
@@ -24,7 +22,7 @@
     name="spawn_model"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-file $(find atcart_greenhouse_gazebo)/urdf/atcart_greenhouse_gazebo.urdf -urdf -model atcart_greenhouse_gazebo"
+    args="-file $(find atcart_basic_gazebo)/urdf/atcart_basic_gazebo.urdf -urdf -model atcart_basic_gazebo"
     output="screen" />
   <node
     name="fake_joint_calibration"

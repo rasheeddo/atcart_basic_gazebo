@@ -3,7 +3,7 @@
     name="model" />
   <param
     name="robot_description"
-    textfile="$(find atcart_greenhouse_gazebo)/urdf/atcart_greenhouse_gazebo.urdf" />
+    textfile="$(find atcart_basic_gazebo)/urdf/atcart_basic_gazebo.urdf" />
   <node
     name="joint_state_publisher"
     pkg="joint_state_publisher"
@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find atcart_greenhouse_gazebo)/urdf.rviz" />
+    args="-d $(find atcart_basic_gazebo)/urdf.rviz" />
 </launch>

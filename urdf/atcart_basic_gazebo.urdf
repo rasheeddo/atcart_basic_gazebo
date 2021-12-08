@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="atcart_greenhouse_gazebo">
+  name="atcart_basic_gazebo">
   <link
     name="base_link">
     <inertial>
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/base_link.STL" />
+          filename="package://atcart_basic_gazebo/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -65,7 +65,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_left.STL" />
+          filename="package://atcart_basic_gazebo/meshes/caster_holder_left.STL" />
       </geometry>
       <material
         name="">
@@ -117,7 +117,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_left.STL" />
+          filename="package://atcart_basic_gazebo/meshes/caster_wheel_left.STL" />
       </geometry>
       <material
         name="">
@@ -169,7 +169,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/caster_holder_right.STL" />
+          filename="package://atcart_basic_gazebo/meshes/caster_holder_right.STL" />
       </geometry>
       <material
         name="">
@@ -221,7 +221,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/caster_wheel_right.STL" />
+          filename="package://atcart_basic_gazebo/meshes/caster_wheel_right.STL" />
       </geometry>
       <material
         name="">
@@ -273,7 +273,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_left.STL" />
+          filename="package://atcart_basic_gazebo/meshes/rear_wheel_left.STL" />
       </geometry>
       <material
         name="">
@@ -325,7 +325,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://atcart_greenhouse_gazebo/meshes/rear_wheel_right.STL" />
+          filename="package://atcart_basic_gazebo/meshes/rear_wheel_right.STL" />
       </geometry>
       <material
         name="">
