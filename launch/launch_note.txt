@@ -1,0 +1,14 @@
+
+
+## For Swarm control
+# arg lat1,lon1 are the refernce point of first bot, then second bot will be shifted automatically according to init_pose value
+# If want to have more bots, open robots.launch and copy the block of previous group and paste and change "ns" as robot3 or something else
+# Change the init_pose of new bot to somewhere else
+
+	roslaunch atcart_basic_gazebo swarm_bots.launch
+
+# To control each bot by joystick, assume we have two joystick as /dev/input/js0 and js1
+# For robot1
+	roslaunch atcart_basic_gazebo joy.launch dev:=/dev/input/js0 ns=robot1
+# For robot2
+	roslaunch atcart_basic_gazebo joy.launch dev:=/dev/input/js1 ns=robot2

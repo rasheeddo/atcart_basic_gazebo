@@ -2,8 +2,12 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="atcart_basic_gazebo">
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="atcart_basic_gazebo" >
+
+  <xacro:arg name="init_lat" default="35.8413736"/>
+  <xacro:arg name="init_lon" default="139.5243106"/>
+
   <link
     name="base_link">
     <inertial>
@@ -420,6 +424,7 @@
 
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+<!--       <robotNamespace>${ns}</robotNamespace> -->
       <alwaysOn>true</alwaysOn>
       <updateRate>40</updateRate>
       <legacyMode>false</legacyMode>
@@ -477,7 +482,7 @@
           <remapping>~/out:=scan</remapping>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type> -->
-        <topicName>atcart_scan</topicName>
+        <topicName>scan</topicName>
         <frame_name>lidar_link</frame_name>
       </plugin>
     </sensor>
@@ -509,8 +514,12 @@
       <topicName>ublox/fix</topicName>  
       <gaussianNoise>0.0 0.0 0.0</gaussianNoise>  
       <offset>0 0 0</offset>
-      <referenceLatitude>36.1209271</referenceLatitude>
-      <referenceLongitude>139.2158217</referenceLongitude>
+      <!-- <referenceLatitude>${init_lat}</referenceLatitude> -->
+      <!-- <referenceLongitude>${init_lon}</referenceLongitude> -->
+      <referenceLatitude>$(arg init_lat)</referenceLatitude>
+      <referenceLongitude>$(arg init_lon)</referenceLongitude>
+      <!-- <referenceLatitude>36.1209271</referenceLatitude> -->
+      <!-- <referenceLongitude>139.2158217</referenceLongitude> -->
       <status>2</status>
       <velocityGaussianNoise>0 0 0</velocityGaussianNoise>  
       <velocityTopicName>ublox/fix_velocity_temp</velocityTopicName>

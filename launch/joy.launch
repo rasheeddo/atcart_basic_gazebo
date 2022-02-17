@@ -1,0 +1,12 @@
+<launch>
+  <arg name="ns" default="/"/>
+  <arg name="dev" default="/dev/input/js0" />
+
+  <group ns="$(arg ns)">
+    <node pkg="joy" name="joy_node" type="joy_node">
+      <param name='dev' type='string' value='$(arg dev)'/>
+    </node>
+
+  </group>
+
+</launch>

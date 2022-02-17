@@ -1,0 +1,41 @@
+<launch>
+  <!-- No namespace here as we will share this description. 
+       Access with slash at the beginning -->
+  <arg name="lat1" value="36.1209271" />
+  <arg name="lon1" value="139.2158217" />
+
+  <param name="robot_description"
+    command="$(find xacro)/xacro $(find atcart_basic_gazebo)/urdf/atcart_basic_gazebo.urdf.xacro init_lat:=$(arg lat1) init_lon:=$(arg lon1)" />
+
+  <!-- BEGIN ROBOT 1-->
+  <group ns="robot1">
+    <arg name="namespace" value="robot1" />
+    <param name="tf_prefix" value="robot1_tf" />
+    <include file="$(find atcart_basic_gazebo)/launch/one_bot.launch" >
+      <arg name="init_pose" value="-x 0 -y 0 -z 0" />
+      <arg name="robot_name"  value="$(arg namespace)" />
+    </include>
+  </group>
+
+  <!-- BEGIN ROBOT 2-->
+  <group ns="robot2">
+    <arg name="namespace" value="robot2" />
+    <param name="tf_prefix" value="robot2_tf" />
+    <include file="$(find atcart_basic_gazebo)/launch/one_bot.launch" >
+      <arg name="init_pose" value="-x -4 -y -4 -z 0" />
+      <arg name="robot_name"  value="$(arg namespace)" />
+    </include>
+  </group>
+
+    <!-- BEGIN ROBOT 3-->
+  <group ns="robot3">
+    <arg name="namespace" value="robot3" />
+    <param name="tf_prefix" value="robot3_tf" />
+    <include file="$(find atcart_basic_gazebo)/launch/one_bot.launch" >
+      <arg name="init_pose" value="-x -6 -y -4 -z 0" />
+      <arg name="robot_name"  value="$(arg namespace)" />
+    </include>
+  </group>
+
+
+</launch>
