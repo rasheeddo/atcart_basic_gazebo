@@ -2,12 +2,12 @@
   <!-- lat/lon1 is the reference location for first bot
         it will be used for next bot as well, 
         but next bot has differenct init_pose so the GPS point is shifted automatically-->
-  <arg name="lat1" value="36.1209271" />
-  <arg name="lon1" value="139.2158217" />
+  <arg name="lat" default="36.1209271" />
+  <arg name="lon" default="139.2158217" />
 
   <!-- A xacro modified of atcart_basic_gazebo.urdf to have arguments of lat/lon for any starting location -->
   <param name="robot_description"
-    command="$(find xacro)/xacro $(find atcart_basic_gazebo)/urdf/atcart_basic_gazebo.urdf.xacro init_lat:=$(arg lat1) init_lon:=$(arg lon1)" />
+    command="$(find xacro)/xacro $(find atcart_basic_gazebo)/urdf/atcart_basic_gazebo.urdf.xacro init_lat:=$(arg lat) init_lon:=$(arg lon)" />
 
   <!-- robot1 -->
   <group ns="robot1">

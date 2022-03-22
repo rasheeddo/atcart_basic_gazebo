@@ -477,7 +477,7 @@
           <remapping>~/out:=scan</remapping>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type> -->
-        <topicName>atcart_scan</topicName>
+        <topicName>scan</topicName>
         <frame_name>lidar_link</frame_name>
       </plugin>
     </sensor>

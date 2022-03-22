@@ -1,10 +1,16 @@
 <launch>
   <param name="/use_sim_time" value="true" />
+  <arg name="lat" default="36.1209271" />
+  <arg name="lon" default="139.2158217" />
 
   <!-- start world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
   </include>
 
   <!-- include our robots -->
-  <include file="$(find atcart_basic_gazebo)/launch/robots.launch"/>
+  <include file="$(find atcart_basic_gazebo)/launch/robots.launch">
+    <arg name="lat" value="$(arg lat)" />
+    <arg name="lon"  value="$(arg lon)" />
+
+  </include>
 </launch>

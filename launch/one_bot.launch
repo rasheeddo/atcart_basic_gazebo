@@ -14,6 +14,7 @@
 
   <node pkg="jmoab-ros" name="jmoab_ros_compass_sim_node" type="jmoab-ros-compass-simulation.py" args="--ns $(arg robot_name)" output="screen"/>
   <node pkg="jmoab-ros" name="jmoab_ros_atcart_sim_node" type="jmoab-ros-atcart-simulation.py" args="--ns $(arg robot_name)" output="screen"/>
+  <node pkg="jmoab-ros" name="jmoab_ros_adc_sim_node" type="jmoab-ros-adc-simulation.py" args="--ns $(arg robot_name)" output="screen"/>
   <node pkg="atcart_basic_gazebo" name="vel_conversion_node" type="vel_type_conversion.py" args="--ns $(arg robot_name)" output="screen" />
 
 </launch>

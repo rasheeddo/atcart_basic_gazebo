@@ -1,4 +1,5 @@
 <launch>
+  <arg name="rviz" default="urdf"/>
   <arg
     name="model" />
   <param
@@ -16,5 +17,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find atcart_basic_gazebo)/urdf.rviz" />
+    args="-d $(find atcart_basic_gazebo)/$(arg rviz).rviz" />
 </launch>
